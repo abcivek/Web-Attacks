@@ -12,13 +12,13 @@ def dirAttack():
 
     for line in words: 
         word = line.strip("\n")
-        req_url = "{0}/{1}".format(host,word) 
+        req_url = "{0}/{1}".format(host, word) 
         if "http" not in req_url:     
-            req_url = "http://"+req_url 
+            req_url = "http://" + req_url 
         try: 
             req = urllib.request.urlopen(req_url) 
-            if req.getcode()== 200: 
-                print("[+] {0}/{1} is Found (200)".format(host,word)) 
+            if req.getcode() == 200: 
+                print("[+] {0}/{1} is Found (200)".format(host, word)) 
         except: 
             pass 
 
